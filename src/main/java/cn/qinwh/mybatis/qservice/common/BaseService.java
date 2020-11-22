@@ -107,6 +107,8 @@ public interface BaseService<T> {
      **/
     int update(T pojo);
 
+    int updateByExample(T pojo, Object o);
+
     /**
      * @Description: 根据主键更新属性不为null的值
      *
@@ -116,6 +118,8 @@ public interface BaseService<T> {
      * @return:  如果数值大于0 则成功，null为失败
      **/
     int updateSelective(T pojo);
+
+    int updateByExampleSelective(T pojo, Object o);
 
     /**
      * @Description: 根据主键删除记录

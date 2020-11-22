@@ -144,6 +144,18 @@ public class BaseServiceImpl<T> implements BaseService<T> {
     }
 
     /**
+     *
+     * @param pojo
+     * @param o
+     * @return
+     */
+    @Override
+    public int updateByExample(T pojo, Object o){
+        return this.mapper.updateByExample(pojo, o);
+    }
+
+
+    /**
      * @Description: 根据主键更新属性不为null的值
      * @Date: 2019/6/9 22:38
      * @Param: pojo 实体对象
@@ -152,6 +164,17 @@ public class BaseServiceImpl<T> implements BaseService<T> {
     @Override
     public int updateSelective(T pojo){
         return this.mapper.updateByPrimaryKeySelective(pojo);
+    }
+
+    /**
+     *
+     * @param pojo
+     * @param o
+     * @return
+     */
+    @Override
+    public int updateByExampleSelective(T pojo, Object o){
+        return this.mapper.updateByExampleSelective(pojo, o);
     }
 
     /**
